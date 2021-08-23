@@ -19,7 +19,6 @@ use Illuminate\Http\Request;
 |
 */
 
-
 //openbare/public routes
 Route::get('/products/search/{name}', [ProductController::class, 'search']);
 Route::get('/products/{id}', [ProductController::class, 'show']);

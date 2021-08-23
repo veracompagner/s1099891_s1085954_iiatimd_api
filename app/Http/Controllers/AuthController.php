@@ -36,7 +36,7 @@ class AuthController extends Controller
         auth()->user()->tokens()->delete();
 
         return [
-            'message' => 'uitgelogd'
+            'message' => 'Uitgelogd'
         ];
     }
 
@@ -52,7 +52,7 @@ class AuthController extends Controller
         //check wachtwoord
         if(!$user || !Hash::check($fields['password'], $user->password)){
             return response([
-                'message' => 'verkeerde gegevens!'
+                'message' => 'Incorrecte inloggegevens'
             ], 401);
         }
 
